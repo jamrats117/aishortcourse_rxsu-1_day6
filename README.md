@@ -1,0 +1,1 @@
+# aishortcourse_rxsu-1_day6
