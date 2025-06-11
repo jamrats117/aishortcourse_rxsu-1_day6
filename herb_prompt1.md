@@ -65,7 +65,7 @@ Prompt
 ไม่พบสมุนไพรในระบบ กรุณาสอบถาม Admin
 
 ***ข้อมูลสำคัญสำหรับสร้าง code***
-✅ ตรวจสอบว่า intent ที่รับเข้ามามี displayName ตรงกับ "xxx" หรือไม่
+✅ ตรวจสอบว่า intent ที่รับเข้ามามี displayName ตรงกับ "get_herb_post_inr - yes" หรือไม่
 ✅ ถ้าใช่ ให้วนลูปค้นหาใน outputContexts ของ intent
 ✅ context ที่ต้องการคือ context ที่มี parameter "herb"
 ✅ ผมติตตั้ง better log เพื่อทำการ debugging แบบนี้ var log = BetterLog.useSpreadsheet(); โปรดแทรกโคด better log เพื่อ track แต่ละขั้นตอนด้วยครับ
