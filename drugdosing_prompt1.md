@@ -21,10 +21,10 @@ Prompt
 ฉันต้องการให้โค้ดนี้รับข้อมูลจาก API response ของ Dialogflow โดยใช้พารามิเตอร์ drug ซึ่งจะระบุชื่อยาที่ผู้ใช้ค้นหา และ weight ซึ่งระบุน้ำหนักในหน่วยกิโลกรัม โดยข้อมูลพารามิเตอร์จะอยู่ใน outputContexts ตามโครงสร้าง API response ดังนี้:
 
 {
-  "responseId": "86738d64-b174-454a-ab2e-bd056cd872ab-996f169b",
+  "responseId": "767ea988-ced7-4eac-b951-76bdecc30166-996f169b",
   "queryResult": {
-    "queryText": "ใช่จ้า",
-    "action": "get_herb_post_inr.get_herb_post_inr-yes",
+    "queryText": "ใช่",
+    "action": "get_drug_post_dosing.get_drug_post_dosing-yes",
     "parameters": {},
     "allRequiredParamsPresent": true,
     "fulfillmentMessages": [
@@ -38,17 +38,19 @@ Prompt
     ],
     "outputContexts": [
       {
-        "name": "projects/herb-4-110625-btkk/agent/sessions/6f72a44f-d335-26dd-c8dd-b949fc0edbc4/contexts/get_herb_post_inr-followup",
+        "name": "projects/dosing-110625-lxti/agent/sessions/6f72a44f-d335-26dd-c8dd-b949fc0edbc4/contexts/get_drug_post_dosing-followup",
         "lifespanCount": 1,
         "parameters": {
-          "herb.original": "เทียม",
-          "herb": "กระเทียม"
+          "drug.original": "Amoxicillin",
+          "weight.original": "14",
+          "drug": "Amoxicillin",
+          "weight": 14
         }
       }
     ],
     "intent": {
-      "name": "projects/herb-4-110625-btkk/agent/intents/ac8a8ed8-d61b-4134-9b4c-527dc7a6d9aa",
-      "displayName": "get_herb_post_inr - yes"
+      "name": "projects/dosing-110625-lxti/agent/intents/c8489f9c-8482-4680-bcd5-f3b4ae0ef25f",
+      "displayName": "get_drug_post_dosing - yes"
     },
     "intentDetectionConfidence": 1,
     "languageCode": "th"
@@ -72,9 +74,9 @@ Prompt
 ไม่พบยาที่ต้องการคำนวณในระบบ กรุณาสอบถาม Admin
 
 ***ข้อมูลสำคัญสำหรับสร้าง code***
-✅ ตรวจสอบว่า intent ที่รับเข้ามามี displayName ตรงกับ "get_herb_post_inr - yes" หรือไม่
+✅ ตรวจสอบว่า intent ที่รับเข้ามามี displayName ตรงกับ "get_drug_post_dosing - yes" หรือไม่
 ✅ ถ้าใช่ ให้วนลูปค้นหาใน outputContexts ของ intent
-✅ context ที่ต้องการคือ context ที่มี parameter "herb"
+✅ context ที่ต้องการคือ context ที่มี parameter "drug" และ "weight"
 ✅ ผมติตตั้ง better log เพื่อทำการ debugging แบบนี้ var log = BetterLog.useSpreadsheet(); โปรดแทรกโคด better log เพื่อ track แต่ละขั้นตอนด้วยครับ
 ✅ ใน better log ใช้ได้แค่ log.info(...) เท่านั้น ห้ามใช้แบบอื่นนอกเหนือจาก info เช่น warning, error เป็นต้น
 ✅ การคำนวณแสดงเป็นตัวเลขทศนิยม 2 ตำแหน่ง
