@@ -79,7 +79,9 @@ Prompt
 ✅ context ที่ต้องการคือ context ที่มี parameter "drug" และ "weight"
 ✅ ผมติตตั้ง better log เพื่อทำการ debugging แบบนี้ var log = BetterLog.useSpreadsheet(); โปรดแทรกโคด better log เพื่อ track แต่ละขั้นตอนด้วยครับ
 ✅ ใน better log ใช้ได้แค่ log.info(...) เท่านั้น ห้ามใช้แบบอื่นนอกเหนือจาก info เช่น warning, error เป็นต้น
+✅ log ทุกอันที่มีการแสดงค่าจากตัวแปรต้องใช้ JSON.stringify() เสมอ
 ✅ การคำนวณแสดงเป็นตัวเลขทศนิยม 2 ตำแหน่ง
+
 
 ตัวอย่าง code ที่ต้องการ
   var outputContexts = request.queryResult.outputContexts;
