@@ -69,6 +69,7 @@ Prompt
 ✅ ถ้าใช่ ให้วนลูปค้นหาใน outputContexts ของ intent
 ✅ context ที่ต้องการคือ context ที่มี parameter "herb"
 ✅ ผมติตตั้ง better log เพื่อทำการ debugging แบบนี้ var log = BetterLog.useSpreadsheet(); โปรดแทรกโคด better log เพื่อ track แต่ละขั้นตอนด้วยครับ
+✅ ใน better log ใช้ได้แค่ log.info(...) เท่านั้น ห้ามใช้แบบอื่นนอกเหนือจาก info เช่น warning, error เป็นต้น
 
 ตัวอย่าง code ที่ต้องการ
   var outputContexts = request.queryResult.outputContexts;
